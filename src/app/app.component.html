@@ -8,11 +8,15 @@
           <input type="text" id="username" formControlName="username" class="form-control">
           <span *ngIf="!signUpForm.get('userData.username').valid && signUpForm.get('userData.username').touched">Please enter a valid
             username!</span>
+          <!-- <span *ngIf="signUpForm.get('userData.username').errors['nameIsForbidden']">This name is invalid!</span> -->
+          <!-- <span *ngIf="signUpForm.get('userData.username').errors['nameIsForbidden']">This name is invalid!</span>
+          <span *ngIf="signUpForm.get('userData.username').errors['required']">This field is required!</span> -->
         </div>
         <div class="form-group">
           <label for="email">Email</label>
           <input type="text" id="email" formControlName="email" class="form-control">
           <span *ngIf="!signUpForm.get('userData.email').valid && signUpForm.get('userData.email').touched">Please enter a valid email!</span>
+          <!-- <span *ngIf="signUpForm.get('userData.email').errors.emailIsInvalid">This email can't be used!</span> -->
         </div>
        </div>
         <div class="radio" *ngFor="let gender of genders">
@@ -31,7 +35,8 @@
           </div>
         </div>
         <div *ngIf="!signUpForm.valid && signUpForm.touched" class="alert alert-danger">Please enter valid data.</div>
-        <button class="btn btn-primary" type="submit" [disabled]="!signUpForm.valid">Submit</button>
+        <!-- <button class="btn btn-primary" type="submit" [disabled]="!signUpForm.valid">Submit</button> -->
+        <button class="btn btn-primary" type="submit" >Submit</button>
       </form>
     </div>
   </div>
